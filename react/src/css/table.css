@@ -1,0 +1,14 @@
+td p{
+    border-radius: 5px;
+    margin: auto 5px;
+    padding: 10px;
+    background: #343a40;
+    color: white;
+}
+
+
+td h6{
+    border-bottom: 2px solid black;
+    margin: 5px;
+    padding: 3px;
+}

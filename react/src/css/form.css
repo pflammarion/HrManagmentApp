@@ -1,0 +1,17 @@
+input{
+    border: none;
+    border-bottom: solid 2px #343a40;
+    margin-left: 10px;
+    transition: 0.2s ease;
+}
+
+input:focus{
+    outline: none !important;
+    border-bottom: solid 2px lightslategrey;
+    color: lightslategrey;
+    margin-left: 14px;
+}
+
+select{
+    margin-left: 10px;
+}

@@ -1,0 +1,38 @@
+.ok{
+    visibility: hidden;
+    background: lightgreen;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid black 3px;
+}
+
+.load{
+    visibility: hidden;
+    background: grey;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid black 3px;
+}
+
+.error{
+    visibility: hidden;
+    background: darkred;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid black 3px;
+}
