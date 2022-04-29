@@ -7,7 +7,7 @@ Login page :
 
 Home page :
 
-![image](https://user-images.githubusercontent.com/80546510/164987674-a513caf0-3410-4469-9d65-8062d07228fe.png)
+<img width="650" alt="image" src="https://user-images.githubusercontent.com/80546510/165911007-439a1fca-3b16-4226-8cee-8ea7d62d11fc.png">
 
 
 User page (admin) :
