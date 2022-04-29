@@ -28,7 +28,7 @@ const putJobById = (id, data) => {
 }
 
 const createNewJob = (data) => {
-    return axios.post(API_URL + "employee", data, {headers: authHeader()})
+    return axios.post(API_URL + "job/", data, {headers: authHeader()})
 }
 
 
