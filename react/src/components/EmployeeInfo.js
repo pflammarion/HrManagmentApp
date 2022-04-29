@@ -31,16 +31,16 @@ const EmployeeInfo = () => {
     if (infoEmployee.empId !== null){
 
         return(
-        <>
+        <div className={"more"}>
             <Link to={"/employee"}><button>All employee list</button></Link>
-            <h3>{infoJob.jobName}</h3>
-            <h3>{infoEmployee.empFName} {infoEmployee.empLName}</h3>
-            <h4>His age is: {infoEmployee.empAge} yo</h4>
-            <h4>Contact him: <strong>{infoEmployee.empEmail}</strong></h4>
-            <h4>{infoEmployee.empPhone}</h4>
+            <div className={"container"}>
+                <h3>{infoEmployee.empFName} {infoEmployee.empLName} {infoJob.jobName}</h3>
+                <h4>Age: {infoEmployee.empAge} yo</h4>
+                <h4>Email: {infoEmployee.empEmail}</h4>
+                <h4>Phone: {infoEmployee.empPhone}</h4>
+            </div>
 
-
-        </>
+        </div>
     )}
     else {
         return (

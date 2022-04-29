@@ -1,0 +1,75 @@
+.loader {
+    display: flex;
+    justify-content: right;
+    margin-right: 40px;
+}
+
+.circular{
+    height:50px;
+    width: 50px;
+    position: relative;
+    transform:scale(2);
+}
+.circular .inner{
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    height: 40px;
+    width: 40px;
+    margin: -20px 0 0 -20px;
+    background: #dde6f0;
+    border-radius: 100%;
+
+}
+.circular #value{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:10;
+    font-size:18px;
+    font-weight:500;
+    color:#343a40;
+}
+
+/*Same value or divided by 2 than circular*/
+.circular .bar{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 50px, 25px);
+}
+.circle .bar .progress{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 25px, 50px, 0px);
+    background: #343a40;
+}
+.circle .left .progress{
+    z-index:1;
+    animation: left .5s linear both;
+}
+@keyframes left{
+    100%{
+        transform: rotate(180deg);
+    }
+}
+.circle .right {
+    transform: rotate(180deg);
+    z-index:3;
+
+}
+.circle .right .progress{
+    animation: right .5s linear both;
+    animation-delay:.5s;
+}
+@keyframes right{
+    100%{
+        transform: rotate(180deg);
+    }
+}
