@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import EmployeeService from "../services/employee.service";
 import AuthService from "../services/auth.service";
-import EventBus from "../common/EventBus";
 import {Link} from "react-router-dom";
 import {button} from "react-validation";
 import dataService from "../services/employee.service";
@@ -97,8 +96,5 @@ const EmployeeList = () => {
         )
     }
     }
-
-
-
 
 export default EmployeeList;

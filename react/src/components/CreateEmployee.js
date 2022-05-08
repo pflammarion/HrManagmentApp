@@ -14,7 +14,6 @@ const CreateEmployee = () => {
     const [empAge, setEmpAge] = useState("");
     const [empEmail, setEmpEmail] = useState("");
     const [empPhone, setEmpPhone] = useState("");
-    const [user, setUser] = useState("");
     const [job, setJob] = useState("");
 
 
@@ -122,16 +121,14 @@ const CreateEmployee = () => {
                     <label>
                         Job :
                         <select onChange={onChangeJob}>
+                            <option value={"blank"}>- - - -</option>
                             {jobList.map((val, key) => {
                                 return(
                                     <option key={key} value={val.jobId}>{val.jobName}</option>
                                 )
                             })}
-
                         </select>
                     </label>
-
-
                     <button type={"submit"} onClick={handleSubmit}>Submit</button>
                 </form>
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import UserService from "../services/user.service";
 import EmployeeService from "../services/employee.service";
 import {Link} from "react-router-dom";
 
@@ -40,24 +39,22 @@ const Home = () => {
     return (
         <div className="container">
           <header className="jumbotron">
-            <h3>We have
+            <h3>We have</h3>
                 <div className={"loader"}>
                     <div className="circular">
-                        <div className={"inner"}></div>
+                        <div className={"inner"}/>
                         <div id={"value"}>1</div>
                         <div className="circle">
                             <div className="bar left">
-                                <div id={"progress-l"}></div>
+                                <div id={"progress-l"}/>
                             </div>
                             <div className="bar right">
-                                <div id={"progress-r"}></div>
+                                <div id={"progress-r"}/>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-                employees</h3>
+                <h3>employees</h3>
               <p>Do you want to see all our employees?</p>
               <Link to={"/employee"}>
                   Go check this link

@@ -1,11 +1,7 @@
 import React, {useEffect, useState} from "react";
-import EmployeeService from "../services/employee.service";
 import AuthService from "../services/auth.service";
-import EventBus from "../common/EventBus";
 import {Link} from "react-router-dom";
 import {button} from "react-validation";
-import dataService from "../services/employee.service";
-import JobService from "../services/job.service";
 import UserService from "../services/user.service";
 
 const UserList = () => {
@@ -33,7 +29,6 @@ const UserList = () => {
         UserService.deleteUserById(id).then((res) => window.location.reload());
     }
 
-    console.log(userList)
     if (currentUser !== null){
         return(
             <>
@@ -84,8 +79,5 @@ const UserList = () => {
         )
     }
 }
-
-
-
 
 export default UserList;

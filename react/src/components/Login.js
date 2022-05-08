@@ -5,7 +5,6 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import AuthService from "../services/auth.service";
-import EmployeeService from "../services/employee.service";
 
 const required = (value) => {
   if (!value) {
@@ -106,7 +105,7 @@ const Login = () => {
           <div className="form-group">
             <button className="btn btn-primary btn-block" disabled={loading}>
               {loading && (
-                <span className="spinner-border spinner-border-sm"></span>
+                <span className="spinner-border spinner-border-sm"/>
               )}
               <span>Login</span>
             </button>

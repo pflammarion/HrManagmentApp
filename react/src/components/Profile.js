@@ -1,6 +1,4 @@
-import React, {useEffect, useState} from "react";
 import AuthService from "../services/auth.service";
-import EmployeeService from "../services/employee.service";
 
 const Profile = () => {
     const currentUser = AuthService.getCurrentUser();

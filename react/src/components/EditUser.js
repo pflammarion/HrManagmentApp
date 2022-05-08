@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import AuthService from "../services/auth.service";
 import {Link, useParams} from "react-router-dom";
-import EmployeeService from "../services/employee.service";
 import {button} from "react-validation";
-import JobService from "../services/job.service";
 import UserService from "../services/user.service";
 
 const EditUser = () => {

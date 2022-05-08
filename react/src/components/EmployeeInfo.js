@@ -1,11 +1,7 @@
 import React, {useEffect, useState} from "react";
 import EmployeeService from "../services/employee.service";
-import AuthService from "../services/auth.service";
-import EventBus from "../common/EventBus";
 import {Link, useParams} from "react-router-dom";
 import {button} from "react-validation/build/main";
-import { useHistory ,useLocation } from 'react-router-dom';
-import toInt from "validator/es/lib/toInt";
 import JobService from "../services/job.service";
 
 const EmployeeInfo = () => {
