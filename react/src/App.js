@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import {Routes, Route, Link, useParams} from "react-router-dom";
+import {Routes, Route, Link, useParams, Navigate} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import logo from "./assets/badge.svg"
 
 import AuthService from "./services/auth.service";
 
@@ -54,16 +55,9 @@ const App = () => {
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <Link to={"/"} className="navbar-brand">
-          Flam Info
+          <img src={logo} id={"home-logo"}/>
         </Link>
         <div className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link to={"/home"} className="nav-link">
-              Home
-            </Link>
-          </li>
-
-
           {(showModeratorBoard || showAdminBoard)  && (
             <li className="nav-item">
               <Link to={"/user"} className="nav-link">
@@ -104,22 +98,32 @@ const App = () => {
         )}
       </nav>
 
-      <div className="container mt-3">
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/home" element={<Home/>} />
-          <Route path="/login" element={<Login/>} />
+
+
+      {currentUser ? (
+  <Routes>
+    <Route path="/" element={<Home/>} />
+    <Route path="/home" element={<Home/>} />
+    <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>} />
           <Route path="/profile" element={<Profile/>} />
-          <Route path="/user" element={<UserList/>} />
-          <Route path="/user/edit/:userId" element={<EditUser/>} />
-          <Route path={"/employee"} element={<EmployeeList/>} />
-          <Route path={"/employee/create"} element={<CreateEmployee/>} />
-          <Route path="/employee/:employeeId" element={<EmployeeInfo/>} />
-          <Route path="/employee/edit/:employeeId" element={<EditEmployee/>} />
-        </Routes>
+        <Route path="/user" element={<UserList/>} />
+        <Route path="/user/edit/:userId" element={<EditUser/>} />
+        <Route path={"/employee"} element={<EmployeeList/>} />
+        <Route path={"/employee/create"} element={<CreateEmployee/>} />
+        <Route path="/employee/:employeeId" element={<EmployeeInfo/>} />
+        <Route path="/employee/edit/:employeeId" element={<EditEmployee/>} />
+    <Route path='*' element={<Home />} />
+  </Routes>
+      ) : (
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/home" element={<Home/>} />
+            <Route path="/login" element={<Login/>}/>
+            <Route path='*' element={<Home />} />
+          </Routes>
+      )}
       </div>
-    </div>
   );
 };
 

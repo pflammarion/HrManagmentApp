@@ -95,7 +95,7 @@ const CreateEmployee = () => {
             <div>
                 <div id={"ok"} className={"ok"}><h1>Content changed</h1></div>
                 <div id={"error"} className={"error"}><h1>Error</h1></div>
-                <Link to={"/employee"}><button>All employee list</button></Link>
+                <Link to={"/employee"}><button>All employees list</button></Link>
 
                 <form>
                     <label>

@@ -28,9 +28,9 @@ const EmployeeInfo = () => {
 
         return(
         <div className={"more"}>
-            <Link to={"/employee"}><button>All employee list</button></Link>
+            <Link to={"/employee"}><button>All employees list</button></Link>
             <div className={"container"}>
-                <h3>{infoEmployee.empFName} {infoEmployee.empLName} {infoJob.jobName}</h3>
+                <h3>{infoEmployee.empFName} {infoEmployee.empLName} | {infoJob.jobName}</h3>
                 <h4>Age: {infoEmployee.empAge} yo</h4>
                 <h4>Email: {infoEmployee.empEmail}</h4>
                 <h4>Phone: {infoEmployee.empPhone}</h4>

@@ -30,7 +30,7 @@ const createNewEmployee = (data) => {
 }
 
 const getTotalEmployee = () => {
-    return axios.get(API_URL + "employee/total", {headers: authHeader()})
+    return axios.get(API_URL + "totalemp", {headers: authHeader()})
 }
 
 

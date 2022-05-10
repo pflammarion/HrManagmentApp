@@ -119,7 +119,7 @@ const EditEmployee = () => {
             <div id={"load"} className={"load"}><h1>Loading...</h1></div>
             <div id={"ok"} className={"ok"}><h1>Content changed</h1></div>
             <div id={"error"} className={"error"}><h1>Error</h1></div>
-            <a href={"/employee"}><button>All employee list</button></a>
+            <a href={"/employee"}><button>All employees list</button></a>
 
             <form>
                 <label>

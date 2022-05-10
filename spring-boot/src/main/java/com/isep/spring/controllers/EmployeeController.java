@@ -62,7 +62,7 @@ public class EmployeeController {
         } else return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
     }
-    @GetMapping("employee/total")
+    @GetMapping("totalemp")
     public ResponseEntity getTotal() {
         return ResponseEntity.ok(employeeRepository.count());
     }
