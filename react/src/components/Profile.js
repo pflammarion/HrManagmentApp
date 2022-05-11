@@ -17,11 +17,9 @@ const Profile = () => {
                 <p>
                     <strong>Email:</strong> {currentUser.email}
                 </p>
-                <strong>Authorities:</strong>
-                <ul>
-                    {currentUser.roles &&
-                        currentUser.roles.map((role, index) => <p key={index}>{role}</p>)}
-                </ul>
+                <p>
+                     {currentUser.roles && currentUser.roles.map((role, index) => <p key={index}><strong>Authorities: </strong>{role}</p>)}
+                </p>
             </div>
         )
 };

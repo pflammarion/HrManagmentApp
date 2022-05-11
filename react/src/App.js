@@ -99,31 +99,33 @@ const App = () => {
       </nav>
 
 
-
+      <div className="container mt-3">
       {currentUser ? (
-  <Routes>
-    <Route path="/" element={<Home/>} />
-    <Route path="/home" element={<Home/>} />
-    <Route path="/login" element={<Login/>}/>
+        <Routes>
+          <Route path="/home" element={<Home/>} />
+          <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>} />
           <Route path="/profile" element={<Profile/>} />
-        <Route path="/user" element={<UserList/>} />
-        <Route path="/user/edit/:userId" element={<EditUser/>} />
-        <Route path={"/employee"} element={<EmployeeList/>} />
-        <Route path={"/employee/create"} element={<CreateEmployee/>} />
-        <Route path="/employee/:employeeId" element={<EmployeeInfo/>} />
-        <Route path="/employee/edit/:employeeId" element={<EditEmployee/>} />
-    <Route path='*' element={<Home />} />
-  </Routes>
+          <Route path="/user" element={<UserList/>} />
+          <Route path="/user/edit/:userId" element={<EditUser/>} />
+          <Route path={"/employee"} element={<EmployeeList/>} />
+          <Route path={"/employee/create"} element={<CreateEmployee/>} />
+          <Route path="/employee/:employeeId" element={<EmployeeInfo/>} />
+          <Route path="/employee/edit/:employeeId" element={<EditEmployee/>} />
+          <Route path='*' element={<Home />} />
+        </Routes>
       ) : (
           <Routes>
-            <Route path="/" element={<Home/>} />
             <Route path="/home" element={<Home/>} />
             <Route path="/login" element={<Login/>}/>
-            <Route path='*' element={<Home />} />
+            <Route path='*' element={<Home />}/>
           </Routes>
       )}
       </div>
+      <div className={"footer"}>
+          <p>© St62487  |  2022</p>
+      </div>
+    </div>
   );
 };
 

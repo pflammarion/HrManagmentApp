@@ -1,7 +1,20 @@
+.emp{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.emp h3{
+    margin-top: 10px;
+}
+
+
 .loader {
     display: flex;
     justify-content: right;
     margin-right: 40px;
+    margin-left: 40px;
 }
 
 .circular{

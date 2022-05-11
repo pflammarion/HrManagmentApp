@@ -4,6 +4,21 @@
 @import "css/form.css";
 @import "css/counter.css";
 
+
+body {
+  justify-content: center;
+}
+
+.footer{
+  position: fixed;
+  text-align: right;
+  color: lightgrey;
+  width: 100%;
+  padding: 30px;
+  background-color: #343a40;
+  bottom: 0;
+}
+
 label {
   display: block;
   margin-top: 10px;

@@ -39,22 +39,25 @@ const Home = () => {
     return (
         <div className="container">
           <header className="jumbotron">
-            <h3>We have</h3>
-                <div className={"loader"}>
-                    <div className="circular">
-                        <div className={"inner"}/>
-                        <div id={"value"}>1</div>
-                        <div className="circle">
-                            <div className="bar left">
-                                <div id={"progress-l"}/>
-                            </div>
-                            <div className="bar right">
-                                <div id={"progress-r"}/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3>employees</h3>
+              <div className={"emp"}>
+                  <h3>We have</h3>
+                  <div className={"loader"}>
+                      <div className="circular">
+                          <div className={"inner"}/>
+                          <div id={"value"}>1</div>
+                          <div className="circle">
+                              <div className="bar left">
+                                  <div id={"progress-l"}/>
+                              </div>
+                              <div className="bar right">
+                                  <div id={"progress-r"}/>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <h3>employees</h3>
+              </div>
+
               <p>Do you want to see all our employees?</p>
               <Link to={"/employee"}>
                   Go check this link
