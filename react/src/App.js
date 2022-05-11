@@ -100,18 +100,31 @@ const App = () => {
 
 
       <div className="container mt-3">
+        {showAdminBoard &&(
+          <Routes>
+            <Route path="/user/edit/:userId" element={<EditUser/>} />
+            <Route path="/employee/edit/:employeeId" element={<EditEmployee/>} />
+          </Routes>
+
+          )}
+        {(showModeratorBoard || showAdminBoard)  && (
+            <Routes>
+              <Route path="/home" element={<Home/>} />
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/register" element={<Register/>} />
+              <Route path="/profile" element={<Profile/>} />
+              <Route path="/user" element={<UserList/>} />
+              <Route path={"/employee"} element={<EmployeeList/>} />
+              <Route path={"/employee/create"} element={<CreateEmployee/>} />
+              <Route path="/employee/:employeeId" element={<EmployeeInfo/>} />
+            </Routes>
+        )}
       {currentUser ? (
         <Routes>
           <Route path="/home" element={<Home/>} />
           <Route path="/login" element={<Login/>}/>
-          <Route path="/register" element={<Register/>} />
           <Route path="/profile" element={<Profile/>} />
-          <Route path="/user" element={<UserList/>} />
-          <Route path="/user/edit/:userId" element={<EditUser/>} />
           <Route path={"/employee"} element={<EmployeeList/>} />
-          <Route path={"/employee/create"} element={<CreateEmployee/>} />
-          <Route path="/employee/:employeeId" element={<EmployeeInfo/>} />
-          <Route path="/employee/edit/:employeeId" element={<EditEmployee/>} />
           <Route path='*' element={<Home />} />
         </Routes>
       ) : (

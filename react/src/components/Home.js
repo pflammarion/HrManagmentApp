@@ -2,15 +2,24 @@ import React, { useState, useEffect } from "react";
 
 import EmployeeService from "../services/employee.service";
 import {Link} from "react-router-dom";
+import AuthService from "../services/auth.service";
 
 const Home = () => {
   const [total, setTotal] = useState("");
+  const [currentUser, setCurrentUser] = useState(undefined);
+
+
 
   useEffect(() => {
     EmployeeService.getTotalEmployee().then(
         (response) => {
           setTotal(response.data);
-        })}, []);
+        })
+      const user = AuthService.getCurrentUser();
+      if(user) {
+          setCurrentUser(user);
+      }
+      }, []);
 
 
     function animateValue(id, start, end, duration) {
@@ -58,10 +67,17 @@ const Home = () => {
                   <h3>employees</h3>
               </div>
 
-              <p>Do you want to see all our employees?</p>
-              <Link to={"/employee"}>
-                  Go check this link
-              </Link>
+              {currentUser ? (
+                  <>
+                      <p>Do you want to see all our employees?</p>
+                      <Link to={"/employee"}>
+                          Go check this link
+                      </Link>
+                  </>
+              ): (
+                  <></>
+              )}
+
           </header>
         </div>
     );
