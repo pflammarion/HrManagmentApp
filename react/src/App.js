@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {Routes, Route, Link, useParams, Navigate} from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import logo from "./assets/badge.svg"
 
@@ -53,79 +52,67 @@ const App = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <Link to={"/"} className="navbar-brand">
+      <div className={"navbar"}>
+        <Link to={"/"}>
           <img src={logo} id={"home-logo"}/>
         </Link>
-        <div className="navbar-nav mr-auto">
           {(showModeratorBoard || showAdminBoard)  && (
-            <li className="nav-item">
-              <Link to={"/user"} className="nav-link">
+
+              <Link to={"/user"} id={"user"}>
                 User
               </Link>
-            </li>)}
+            )}
 
           {currentUser && (
-            <li className="nav-item">
-              <Link to={"/employee"} className="nav-link">
+              <Link to={"/employee"} id="employee">
               Employee
               </Link>
-            </li>
           )}
-        </div>
 
         {currentUser ? (
-          <div className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link to={"/profile"} className="nav-link">
+            <>
+              <Link to={"/profile"} id={"profile"}>
                 {currentUser.username}
               </Link>
-            </li>
-            <li className="nav-item">
               <a href="/login" className="nav-link" onClick={logOut}>
                 LogOut
               </a>
-            </li>
-          </div>
+              </>
         ) : (
-          <div className="navbar-nav ml-auto">
-            <li className="nav-item">
+          <>
               <Link to={"/login"} className="nav-link">
                 Login
               </Link>
-            </li>
-          </div>
+          </>
         )}
-      </nav>
+      </div>
 
 
-      <div className="container mt-3">
-        {showAdminBoard &&(
+      <div className="content">
+
+        {showAdminBoard && (
           <Routes>
             <Route path="/user/edit/:userId" element={<EditUser/>} />
             <Route path="/employee/edit/:employeeId" element={<EditEmployee/>} />
           </Routes>
 
           )}
+
         {(showModeratorBoard || showAdminBoard)  && (
             <Routes>
-              <Route path="/home" element={<Home/>} />
-              <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>} />
-              <Route path="/profile" element={<Profile/>} />
               <Route path="/user" element={<UserList/>} />
-              <Route path={"/employee"} element={<EmployeeList/>} />
               <Route path={"/employee/create"} element={<CreateEmployee/>} />
               <Route path="/employee/:employeeId" element={<EmployeeInfo/>} />
             </Routes>
         )}
       {currentUser ? (
         <Routes>
+          <Route path="/" element={<Home/>} />
           <Route path="/home" element={<Home/>} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/profile" element={<Profile/>} />
-          <Route path={"/employee"} element={<EmployeeList/>} />
-          <Route path='*' element={<Home />} />
+          <Route path="/employee" element={<EmployeeList/>} />
         </Routes>
       ) : (
           <Routes>
@@ -134,6 +121,7 @@ const App = () => {
             <Route path='*' element={<Home />}/>
           </Routes>
       )}
+
       </div>
       <div className={"footer"}>
           <p>© St62487  |  2022</p>

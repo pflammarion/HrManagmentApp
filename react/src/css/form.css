@@ -1,5 +1,6 @@
 input{
     border: none;
+    background: none;
     border-bottom: solid 2px #343a40;
     margin-left: 10px;
     transition: 0.2s ease;
@@ -14,4 +15,18 @@ input:focus{
 
 select{
     margin-left: 10px;
+}
+
+form button{
+    margin-top: 20px;
+}
+
+.form-group{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-group input{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

@@ -10,7 +10,8 @@ const Home = () => {
 
 
 
-  useEffect(() => {
+
+    useEffect(() => {
     EmployeeService.getTotalEmployee().then(
         (response) => {
           setTotal(response.data);

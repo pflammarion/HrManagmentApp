@@ -9,7 +9,7 @@ import AuthService from "../services/auth.service";
 const required = (value) => {
   if (!value) {
     return (
-      <div className="alert alert-danger" role="alert">
+      <div role="alert">
         This field is required!
       </div>
     );
@@ -69,13 +69,7 @@ const Login = () => {
   };
 
   return (
-    <div className="col-md-12">
       <div className="card card-container">
-        <img
-          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-          alt="profile-img"
-          className="profile-img-card"
-        />
 
         <Form onSubmit={handleLogin} ref={form}>
           <div className="form-group">
@@ -103,17 +97,14 @@ const Login = () => {
           </div>
 
           <div className="form-group">
-            <button className="btn btn-primary btn-block" disabled={loading}>
-              {loading && (
-                <span className="spinner-border spinner-border-sm"/>
-              )}
+            <button disabled={loading}>
               <span>Login</span>
             </button>
           </div>
 
           {message && (
             <div className="form-group">
-              <div className="alert alert-danger" role="alert">
+              <div role="alert">
                 {message}
               </div>
             </div>
@@ -121,7 +112,6 @@ const Login = () => {
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
       </div>
-    </div>
   );
 };
 
