@@ -61,7 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers("api/totalemp").permitAll()
             .antMatchers("/api/employee/**").authenticated()
             .antMatchers("/api/user/**").authenticated();
-            //.authenticated();
+
 
 
 

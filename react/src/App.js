@@ -52,7 +52,7 @@ const App = () => {
 
   return (
     <div>
-      <div className={"navbar"}>
+      <div className={"navbar"} id={"nav"}>
         <Link to={"/"}>
           <img src={logo} id={"home-logo"}/>
         </Link>

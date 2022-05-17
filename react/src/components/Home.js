@@ -9,9 +9,7 @@ const Home = () => {
   const [currentUser, setCurrentUser] = useState(undefined);
 
 
-
-
-    useEffect(() => {
+  useEffect(() => {
     EmployeeService.getTotalEmployee().then(
         (response) => {
           setTotal(response.data);
@@ -19,8 +17,7 @@ const Home = () => {
       const user = AuthService.getCurrentUser();
       if(user) {
           setCurrentUser(user);
-      }
-      }, []);
+      }}, []);
 
 
     function animateValue(id, start, end, duration) {

@@ -28,3 +28,16 @@ Employee page (admin):
 Profile page (admin):
 
 ![image](https://user-images.githubusercontent.com/80546510/164987773-328804dd-1002-4f51-a23e-6b65cf77bec9.png)
+
+Default users are : 
+
+login: admin
+password: admin
+
+login: mod
+password: mod
+
+login: user
+password: user
+
+Mysql dump in App.sql file
