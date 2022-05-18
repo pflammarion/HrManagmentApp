@@ -2,32 +2,37 @@
 
 Login page :
 
-![image](https://user-images.githubusercontent.com/80546510/164987658-c81ed263-f8a2-4533-8a49-b3716dac232a.png)
+<img width="615" alt="image" src="https://user-images.githubusercontent.com/80546510/168968268-ef45f999-57f0-4c04-8858-3a1c965cc6b4.png">
 
 
-Home page :
+Home page without connection:
 
-<img width="650" alt="image" src="https://user-images.githubusercontent.com/80546510/165911007-439a1fca-3b16-4226-8cee-8ea7d62d11fc.png">
+<img width="617" alt="image" src="https://user-images.githubusercontent.com/80546510/168968213-aae28761-9988-49d0-9e6b-c00a795889e5.png">
 
+Home page connected: 
 
-User page (admin) :
+<img width="614" alt="image" src="https://user-images.githubusercontent.com/80546510/168968333-ade2ca37-64b0-4d8f-a1ea-bf73b40e76cc.png">
 
-![image](https://user-images.githubusercontent.com/80546510/164987701-7b2e4da1-af4d-4200-8ba8-fb0d3c63d179.png)
+Profile page (admin) :
 
+<img width="616" alt="image" src="https://user-images.githubusercontent.com/80546510/168968394-d3162055-d1de-4c3f-bef3-55eee0542a62.png">
 
-Edit user page:
+User page:
 
-![image](https://user-images.githubusercontent.com/80546510/164987723-3038dda1-214c-4ff0-b6aa-a560f0f283da.png)
-
+<img width="872" alt="image" src="https://user-images.githubusercontent.com/80546510/168968730-50b21ab2-0bba-4fac-979e-754219b95857.png">
 
 Employee page (admin):
 
-![image](https://user-images.githubusercontent.com/80546510/164987782-a244f928-55a4-478f-9aa8-67e65330f9cc.png)
+<img width="870" alt="image" src="https://user-images.githubusercontent.com/80546510/168968473-5ecec5b1-1398-425e-a910-c959398a93ed.png">
 
+More employee page:
 
-Profile page (admin):
+<img width="874" alt="image" src="https://user-images.githubusercontent.com/80546510/168968670-82884263-091f-4180-9a1b-b18567c7a337.png">
 
-![image](https://user-images.githubusercontent.com/80546510/164987773-328804dd-1002-4f51-a23e-6b65cf77bec9.png)
+Create new user:
+
+<img width="869" alt="image" src="https://user-images.githubusercontent.com/80546510/168968992-c055191a-b6c6-49b5-8aa1-3fcd3fe6b975.png">
+
 
 Default users are : 
 
