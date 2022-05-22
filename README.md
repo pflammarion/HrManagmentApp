@@ -1,5 +1,18 @@
 # HrManagmentApp
 
+Default users are : 
+
+login: admin
+password: admin
+
+login: mod
+password: mod
+
+login: user
+password: user
+
+Mysql dump in App.sql file
+
 Login page :
 
 <img width="615" alt="image" src="https://user-images.githubusercontent.com/80546510/168968268-ef45f999-57f0-4c04-8858-3a1c965cc6b4.png">
@@ -34,15 +47,4 @@ Create new user:
 <img width="869" alt="image" src="https://user-images.githubusercontent.com/80546510/168968992-c055191a-b6c6-49b5-8aa1-3fcd3fe6b975.png">
 
 
-Default users are : 
 
-login: admin
-password: admin
-
-login: mod
-password: mod
-
-login: user
-password: user
-
-Mysql dump in App.sql file
